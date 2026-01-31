@@ -119,16 +119,4 @@ El proyecto incluye un "Seeder" que crea usuarios por defecto la primera vez que
 
 ---
 
-## 🤝 Contribuir
 
-¡Las Pull Requests son bienvenidas! Si tienes ideas para añadir más funcionalidades "Metal" (como playlists colaborativas o ecualizador), siéntete libre de contribuir.
-
-1.  Fork del proyecto
-2.  Crea tu rama (`git checkout -b feature/AmazingFeature`)
-3.  Commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4.  Push a la rama (`git push origin feature/AmazingFeature`)
-5.  Abre un Pull Request
-
----
-
-*Desarrollado con 🖤 y mucho ☕ para la comunidad Metal.*
