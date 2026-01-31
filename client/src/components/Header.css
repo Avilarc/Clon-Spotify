@@ -1,0 +1,138 @@
+.header-metal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background-color: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo a span {
+  color: var(--accent-primary);
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 2rem;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  background-color: var(--bg-elevated);
+  color: white;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.search-bar input:focus {
+  background-color: var(--bg-hover);
+  border-color: rgba(255,255,255,0.2);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+}
+
+/* Icon placeholder hack if we don't have icons yet */
+.search-bar::before {
+  content: '🔍';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.welcome {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.auth-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-auth {
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-auth:first-child {
+  /* Login - transparent */
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.btn-auth:first-child:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.btn-auth:last-child {
+  /* Register - white */
+  background: white;
+  color: black;
+}
+
+.btn-auth:last-child:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.btn-admin {
+  background-color: rgba(255,255,255,0.1);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-admin:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.btn-logout {
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+.btn-logout:hover {
+  color: white;
+}

@@ -1,0 +1,94 @@
+.album-card {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-base), transform var(--transition-base);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-sm);
+}
+
+.album-card:hover {
+  background-color: var(--bg-elevated);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.album-cover-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.album-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.album-card:hover .album-cover {
+  transform: scale(1.05);
+}
+
+.play-overlay {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.play-overlay:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.1) translateY(0) !important;
+}
+
+.album-card:hover .play-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.album-info h3 {
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.album-info p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.album-info span {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 4px;
+}
